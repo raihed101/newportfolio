@@ -12,9 +12,10 @@ body{
     color: white;
     /* background-position: center; */
     /* background-size: cover; */
-    /* height: 100vh */
-    /* height: 100vh; */
+    height: auto;
+    width: 100%;
 }
+
 
 #title {
   position: absolute;
@@ -44,7 +45,7 @@ html{
   width: 1px;
   height: 1px;
   background: transparent;
-  animation: animStar 50s linear infinite;
+  animation: animStar 40s linear infinite;
   box-shadow: 779px 1331px #fff, 324px 42px #fff, 303px 586px #fff,
   1312px 276px #fff, 451px 625px #fff, 521px 1931px #fff, 1087px 1871px #fff,
   36px 1546px #fff, 132px 934px #fff, 1698px 901px #fff, 1418px 664px #fff,
@@ -621,11 +622,11 @@ html{
 }
 
 .sidenav a {
-  text-decoration: underline;
+  /* text-decoration: underline; */
   font-size: 25px;
   color: #fff;
   display: block;
-  padding: 25px;
+  padding: 30px;
   margin-top: 80px
 }
 
@@ -651,70 +652,61 @@ img{height:40px;
   font-size: 80px;
   margin-left: 180px;
   padding-right:50px;
-  margin-top: 250px;
+  margin-top: 220px;
   letter-spacing: 5px;
-  word-spacing: 3px;
+  word-spacing: 2px;
 }
 
 .banner h1{
-  font-size: 150px;
+  font-size: 140px;
+  font-weight: 100;
+
 }
 
 .banner h3{
-  font-size: 60px;
+  font-size: 80px;
   font-weight: 100;
   
 }
 
 .banner span{
-  /* text-decoration: underline; */
-  /* font-style: italic; */
   border-bottom-style: solid;
   border-bottom-width: 4px;
   width: fit-content;
-  /* font-weight: 100; */
+
 }
 
 .intro{
-  font-size: 15px;
+  font-size: 18px;
   padding-top: 60px;
+  letter-spacing: 1px;
 }
 
+/* span{
+  border-bottom-style: solid;
+  border-bottom-width: 4px;
+  width: fit-content;
+} */
 
-.about_me{
-  /* margin-left: 150px; */
-  margin-top: 20%;
-  background-color: #000;
-  width: 100%;
-  padding: 150px;
-  opacity: 5px;
-  
-}
-
-.about_me h1{
-  font-weight: 100;
-  letter-spacing: 5px;
-
-}
-
-.about_me p{
-  padding: 20px;
-  font-weight: 100;
-}
 
 /* portfolio */
 
 .portfolio{
+  margin-top: 15%;
   margin-bottom: 10%;
   background-color: transparent;
   padding:100px;
-  width: 100%;
-  padding-left: 150px;
+  padding-left: 10%;
+
 }
 
 .portfolio h1{
   font-weight: 100;
   letter-spacing: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 4px;
+  width: fit-content;
+
 
 }
 
@@ -723,20 +715,169 @@ img{height:40px;
   font-weight: 100;
   letter-spacing: 2px;
 
+
 }
 
 .portfolio img{
   margin: 1%;
   width: 100%;
   height: auto;
-  padding: 5px;
+  padding: 20px;
 }
 
-.flex-container{
-  display:flex;
+.grid-container{
+  display:grid;
+  grid-template-columns: 2fr 2fr;
+  grid-auto-rows: minmax(150px, auto);
+  grid-gap:10px;
 }
 
-.proj1{
-  flex: 1;
+.mobile-list{
+  display: none;
 }
+
+/* .grid-item-1{
+
+} */
+
+/* .grid-item-2{
+  grid-template-columns: 2;
+} */
+
+
+
+@media only screen and (max-width:1024px){
+
+
+  .banner{
+    padding: 40px;
+    margin-top: 20%;
+    margin-left: 10%;
+  margin-bottom: 30%;
+  }
+
+
+  .banner h1{
+    font-size: 70px;
+  }
+
+
+  .banner h3{
+    font-size: 40px;
+  }
+
+  .intro{
+    font-size: 12px;
+  }
+
+  .portfolio{
+    padding: 40px;
+    margin-top: 10%;
+    margin-left: 10%;
+
+  }
+
+}
+
+
+
+
+
+/* phone screen */
+@media only screen and (max-width:800px){
+
+  html,body{
+    overflow-x: hidden;
+  }
+
+
+  .intro{
+    font-size: 12px;
+  }
+
+.banner{
+  padding: 50px;
+  margin-left: 60px;
+  margin-top: 80px;
+  margin-bottom: 160px;
+
+}
+
+  .banner h1{
+    font-size: 50px;
+  }
+
+  .banner h3{
+    font-size: 30px;
+    padding-left: 0px;
+
+  }
+
+  .portfolio{
+    padding: 100px;
+    margin-top: 8%;
+
+  }
+
+  .grid-container{
+    grid-template-columns: 2fr;
+  }
+  .sidenav{
+    display: none;
+  }
+
+  .mobile-list {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 30px;
+    border-top: solid 1px white;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.9;
+  }
+
+  .mobile-list i {
+    font-size: 7vmin;
+    color:#fff !important;
+  }
+
+}
+
+@media only screen and (max-width:375px){
+
+  html,body{
+    overflow-x: hidden;
+  }
+
+  .banner{
+    padding: 25px;
+    margin-left: 30px;
+    margin-top: 40px;
+    margin-bottom: 80px;
+  }
+
+  .banner h3{
+    font-size: 15px;
+    padding-left: 0px;
+
+  }
+
+  /* .banner h3 span{
+    
+  } */
+
+  .portfolio{
+    padding: 30px;
+    margin-top: 5%;
+    margin-bottom: 0%;
+
+  }
+
+}
+
 
